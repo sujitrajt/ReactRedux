@@ -64,6 +64,9 @@ export const Products = () => {
         
 
     }
+    const handleDelete = (id) => { 
+        setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
+    }
     return (
         <div>
             <h1>Products</h1>
@@ -88,7 +91,7 @@ export const Products = () => {
                 <tbody>
                     {products.map((product) => (
                         <tr key={product.id}>
-                            <td>{product.id}</td>
+                            <td onClick={() => handleDelete(product.id)}>{product.id}</td>
                             <td>{product.title}</td>
                             <td>{product.price}</td>
                         </tr>
