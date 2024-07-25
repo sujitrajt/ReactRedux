@@ -12,7 +12,7 @@ function App() {
   return (
     <Provider store={store}>
       {/* <ApiProvider api={productsApi}> */}
-        <div className='App'>
+        <div className=''>
           <Routes>
             <Route path='/' element={<Data/>}/>
             <Route path='/products' element={<Products/>}/>
